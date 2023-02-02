@@ -21,13 +21,13 @@ Data Set:
 https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2000-01-01&endtime=2023-01-01&minmagnitude=3&eventtype=earthquake&minlatitude=32.5&minlongitude=-124&maxlatitude=42.0&maxlongitude=-114.5
 
 Parameters:
-Start Date: 2000-01-01
-End Date: 2023-01-01
-Format: geojson
-Min Magnitude: 3
-Event Type: earthquake
-Min Latitude: 32.5
-Min Longitude -12.4
-Max Latitude: 42.0
-Max Longitude: -114.5
+* Start Date: 2000-01-01
+* End Date: 2023-01-01
+* Format: geojson
+* Min Magnitude: 3
+* Event Type: earthquake
+* Min Latitude: 32.5
+* Min Longitude -12.4
+* Max Latitude: 42.0
+* Max Longitude: -114.5
 
