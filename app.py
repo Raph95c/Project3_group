@@ -62,15 +62,18 @@ def allearthquakes():
     # Query the database for earthquake data with magnitude between 3.0 and 4.0
     all_results = session.query(
                             eq_data.place,
-                            eq_data.mag).all()
+                            eq_data.mag
+                            ).filter(eq_data.mag >= 3.0,
+                            eq_data.mag <= 4.0).all()
 
     # Close the session
     session.close()
 
     all_earthquakes = []
-    for mag in all_results:
+    for place, mag in all_results:
         all_earthquakes_dict = {}
         all_earthquakes_dict["Magnitude"] = mag
+        all_earthquakes_dict["Place"] = place
         all_earthquakes.append(all_earthquakes_dict)
 
     # Return the results as a JSON object
@@ -87,16 +90,55 @@ def mag3to4():
     session = Session(engine)
 
     # Query the database for earthquake data with magnitude between 3.0 and 4.0
-    results = session.query(eq_data).filter(eq_data.mag >= 3.0, eq_data.mag < 4.0).all()
+    all_results = session.query(
+                            eq_data.place,
+                            eq_data.mag
+                            ).filter(eq_data.mag >= 3.0,
+                            eq_data.mag <= 4.0).all()
 
     # Close the session
     session.close()
 
-    # Convert the results to a list of dictionaries
-    earthquake_list = [result.__dict__ for result in results]
+    mag3_4_earthquakes = []
+    for place, mag in all_results:
+        mag3_4_earthquakes_dict = {}
+        mag3_4_earthquakes_dict["Magnitude"] = mag
+        mag3_4_earthquakes_dict["Place"] = place
+        mag3_4_earthquakes.append(mag3_4_earthquakes_dict)
 
     # Return the results as a JSON object
-    return jsonify(earthquake_list)
+    return jsonify(mag3_4_earthquakes)
+
+#------------------------------#
+# Magnitude 4.1-5.0 Route      #
+#------------------------------#
+
+@app.route("/api/v1.0/mag41to5earthquakes")
+def mag4to5():
+    # Create a session
+    session = Session(engine)
+
+    # Query the database for earthquake data with magnitude between 4.1 and 5.0
+    all_results = session.query(
+                            eq_data.mag,
+                            eq_data.place,
+                            eq_data.depth
+                            ).filter(eq_data.mag >= 4.1,
+                            eq_data.mag <= 5.0).all()
+
+    # Close the session
+    session.close()
+
+    mag4_5_earthquakes = []
+    for place, depth,mag in all_results:
+        mag4_5_earthquakes_dict = {}
+        mag4_5_earthquakes_dict["Magnitude"] = mag
+        mag4_5_earthquakes_dict["Place"] = place
+        mag4_5_earthquakes_dict["Depth"] = depth
+        mag4_5_earthquakes.append(mag4_5_earthquakes_dict)
+
+    # Return the results as a JSON object
+    return jsonify(mag4_5_earthquakes)
 
 #---------------#
 # Main behavior #
