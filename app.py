@@ -20,10 +20,10 @@ engine = create_engine("sqlite:///Resources/earthquakes.sqlite")
 Base = automap_base()
 
 # Reflect the tables
-Base.prepare(engine, reflect=True)
+Base.prepare(autoload_with=engine)
 
 # View all of the classes that automap found
-print(Base.classes.keys())
+Base.classes.keys()
 
 # Save reference to eq_data table
 eq_data = Base.classes.eq_data
@@ -42,12 +42,40 @@ def home():
     return (
         f"Welcome to the Earthquate app!<br/>"
         f"Available endpoints:<br/>"
+        f"/api/v1.0/allearthquakes<br/>"
         f"/api/v1.0/mag3to4earthquakes<br/>"
         f"/api/v1.0/mag41to5earthquakes<br/>"
         f"/api/v1.0/mag51to6earthquakes<br/>"
         f"/api/v1.0/mag61to7earthquakes<br/>"
         f"/api/v1.0/mag71andgreaterearthquakes<br/>"
     )
+
+#------------------------------#
+# All Earthquakes              #
+#------------------------------#
+
+@app.route("/api/v1.0/allearthquakes")
+def allearthquakes():
+    # Create a session
+    session = Session(engine)
+
+    # Query the database for earthquake data with magnitude between 3.0 and 4.0
+    all_results = session.query(
+                            eq_data.place,
+                            eq_data.mag).all()
+
+    # Close the session
+    session.close()
+
+    all_earthquakes = []
+    for mag in all_results:
+        all_earthquakes_dict = {}
+        all_earthquakes_dict["Magnitude"] = mag
+        all_earthquakes.append(all_earthquakes_dict)
+
+    # Return the results as a JSON object
+    return jsonify(all_earthquakes)
+
 
 #------------------------------#
 # Magnitude 3.0-4.0 Route      #
