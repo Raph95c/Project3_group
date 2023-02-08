@@ -16,7 +16,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: dodgerblue ;
+    background-color: #ade1e5 ;
     font-family: 'Arial',sans-serif;
 }
 .nav-links {
@@ -47,3 +47,29 @@ nav {
 .nav-links li a.active{
     background-color: yellow;
 }
+
+/* Analysis questions header */
+h6 {
+    padding: 20px;
+    margin: 30px;
+  
+    font-size: 30px;
+      /* other styling */
+      background-color: #000501;
+      border-radius: 10px;
+      color: white;
+      font-family: Avenir;
+  
+  
+  
+  }
+p {
+      padding: 20px;
+      margin: 30px;
+      
+      /* other styling */
+      background-color: #73ab84;
+      border-radius: 10px;
+      color: white;
+      font-family: Avenir;
+    }
