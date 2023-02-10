@@ -3,13 +3,19 @@
     padding:0px;
     box-sizing: border-box;
 }
+header img {
+    height: 80px;
+}
+
 
 .body-text{
     display: flex;
-    font-family: 'Arial',sans-serif;
+    font-family:'Courier New', Courier, monospace;
     align-items: center;
     justify-content: center;
     margin-top: 250px;
+    color:whitesmoke;
+    opacity: 0.4;
 }
 nav {
     display: flex;
@@ -18,6 +24,8 @@ nav {
     min-height: 8vh;
     background-color: #ade1e5 ;
     font-family: 'Arial',sans-serif;
+    background-color: dodgerblue ;
+    font-family: "Montserrat",sans-serif;
 }
 .nav-links {
     display: flex;
@@ -31,10 +39,10 @@ nav {
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 20px;
+    font-size: 30px;
 }
 .nav-links a{
-    color: white;
+    color:blueviolet;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -47,6 +55,7 @@ nav {
 .nav-links li a.active{
     background-color: yellow;
 }
+
 
 /* Analysis questions header */
 h6 {
@@ -73,3 +82,16 @@ p {
       color: white;
       font-family: Avenir;
     }
+    body {
+        padding: 0;
+        margin: 0;
+      }
+      
+      /* Set map, body, and html to 100% of the screen size. */
+      #map,
+      body,
+      html {
+        height: 100%;
+      }
+      
+      
