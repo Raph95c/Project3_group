@@ -55,7 +55,8 @@ nav {
 .nav-links li a.active{
     background-color: yellow;
 }
-
+.nav-menu{ 
+    width: 100%; text-align: center; }
 
 /* Analysis questions header */
 h6 {
