@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="'UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <title>About</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+  <!-- Leaflet JavaScript code -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+  <!-- D3 Library -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <nav>
+        <div class="'heading">
+            <h4>Welcome to Group 1 Project</h4>
+        </div>
+        
+        <ul class="'nav-links">
+            <li><a href='../index.html'>Home</a><a></li>
+            <li><a href='Analysis.html'>Analysis</a><a></li>
+            <li><a class="active" href='Sources2.html'>Sources</a><a></li>
+        </ul>
+    </nav>
+    <div class="'body-text"><h1>Visualization</h1>
+        <p>Below you will see the Geojson:</p>
+        <input type="range" min="2000" max="2023" value="2023" class="slider" id="yearSlider">
+        <span id="yearValue">2023</span>      
+   
+    </div>
+
+    <div id="map"></div>
+
+    <script type="text/javascript" src="../sources2.js"></script>
+
+
+</body>
+</html>
