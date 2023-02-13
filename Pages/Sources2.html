@@ -21,21 +21,38 @@
 
 
     <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
 
 </head>
 <body>
-    <nav>
-        <div class="'heading">
-            <h4>Welcome to Group 1 Project</h4>
-        </div>
-        
-        <ul class="'nav-links">
-            <li><a href='../index.html'>Home</a><a></li>
-            <li><a href='Analysis.html'>Analysis</a><a></li>
-            <li><a class="active" href='Sources2.html'>Sources</a><a></li>
-        </ul>
-    </nav>
+    <div class="navbar">
+        <a class="home" href="home.html">Home</a>
+        <div class="subnav">
+          <button class="subnavbtn">Analysis <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href='analysis.html#q1'>Intensity over the years</a>
+            <a href="analysis.html#q2">Frequency over the years </a>
+            <a href="analysis.html#q3">Depth vs Magnitude</a>
+          </div>
+        </div> 
+        <div class="subnav">
+          <button class="subnavbtn">Resources<i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="https://github.com/Raph95c/Project3_group">Github</a>
+            <a href="https://earthquake.usgs.gov/data/comcat/index.php#magType">Data Documentation</a>
+            <a href="https://raw.githubusercontent.com/Raph95c/Project3_group/main/Resources/ca_eq_data_records.json">Geojson</a>
+          </div>
+        </div> 
+        <div class="subnav">
+          <button class="subnavbtn">Maps<i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="Sources2.html">Yearly Earthquakes</a>
+            <a href="Sources.html">All Earthquakes</a>
+          </div>
+        </div> 
+      </div>
+    
+     
     <div class="'body-text"><h1>Visualization</h1>
         <p>Below you will see the Geojson:</p>
         <input type="range" min="2000" max="2023" value="2023" class="slider" id="yearSlider">
