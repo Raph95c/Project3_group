@@ -27,10 +27,10 @@ def analysis1():
 
 @app.route('/Sources.html')
 def Sources():
-   template = jinja_env.get_template('Sources.template')
+   template = jinja_env.get_template('Sources.html')
    return template.render()
 
-@app.route('/Sources2')
+@app.route('/Sources2.html')
 def Sources2():
    template = jinja_env.get_template('Sources2.html')
    return template.render()

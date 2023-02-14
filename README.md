@@ -31,6 +31,3 @@ Parameters:
 * Max Latitude: 42.0
 * Max Longitude: -114.5
 
-
-link to presentation slides:
-https://docs.google.com/presentation/d/1GShyjQbd0F8-xTlQ6tL4qCz-45YTVMTcEt-E579lkKE/edit?usp=sharing
