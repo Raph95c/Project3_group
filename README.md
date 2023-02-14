@@ -1,9 +1,9 @@
 ## Project 3: California Earthquakes – Is the next big one coming?
 
-# Group 1 Team Members: Robert Hascall, Quoc Tran, Alexis Valdez, Kelly Stave, Raymundo Zapien
+Group 1 Team Members: Robert Hascall, Quoc Tran, Alexis Valdez, Kelly Stave, Raymundo Zapien
 Overview:
 
-# The title of our project is: California Earthquakes - Is the next big one coming?
+The title of our project is: California Earthquakes - Is the next big one coming?
 
 The aim of our project is to determine if there has been a change in the frequency and severity of earthquakes in California over the last 20 years. We will examine the following questions:
 
