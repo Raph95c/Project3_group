@@ -10,6 +10,11 @@ jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), a
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
+@app.route('/')
+def index():
+   template = jinja_env.get_template('home.html')
+   return template.render()
+
 @app.route('/home.html')
 def home():
    template = jinja_env.get_template('home.html')
@@ -22,7 +27,7 @@ def analysis1():
 
 @app.route('/Sources.html')
 def Sources():
-   template = jinja_env.get_template('Sources.html')
+   template = jinja_env.get_template('Sources.template')
    return template.render()
 
 @app.route('/Sources2')
